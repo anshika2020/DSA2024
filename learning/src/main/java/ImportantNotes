@@ -1,0 +1,15 @@
+Permutation formula :
+
+P(n,r) = n!/(n-r)!
+
+Combination :
+C(n,r) = n!/r!(n-r)!
+
+5*4*3*2*1  80/2*6
+
+subset : 2^n
+
+
+queue is FIFO
+stack is LIFO
+
