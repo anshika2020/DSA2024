@@ -1,7 +1,5 @@
 package trees;
 
-import jdk.nashorn.api.tree.Tree;
-
 import java.util.*;
 
 public class BfsLevelOrdeTraversal {

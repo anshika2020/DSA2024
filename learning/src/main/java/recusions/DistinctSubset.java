@@ -8,7 +8,7 @@ public class DistinctSubset {
 
     // Complete the function below.
     public static List<String> get_distinct_subsets(String str) {
-        var result = new ArrayList<String>();
+        List<String> result = new ArrayList<String>();
         helper(str, 0, new char[str.length()], result);
         return result;
     }

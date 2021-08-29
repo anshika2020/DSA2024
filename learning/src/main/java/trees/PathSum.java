@@ -1,7 +1,5 @@
 package trees;
 
-import LinkedListDS.LinkedList;
-
 import java.util.ArrayList;
 import java.util.List;
 

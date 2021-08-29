@@ -1,7 +1,5 @@
 package sorting;
 
-import LinkedListDS.NodesLength;
-
 public class MergeTwoSortedList {
 
      Node head;
