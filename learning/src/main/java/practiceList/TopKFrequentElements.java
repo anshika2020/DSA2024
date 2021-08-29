@@ -38,8 +38,6 @@ Output: [3, 1]
         for(int i =0; i<k; i++){
             result.add(list.get(i).getKey());
         }
-
-
 //        for(Map.Entry<Integer, Integer> entry :  list.subList(list.size()-k, list.size())){//TC: O(n)
 //            result.add(entry.getKey()); // TC: O(1)
 //        }
@@ -66,7 +64,6 @@ Output: [3, 1]
          Time complexity of both heap is O(nlogk)
           */
          PriorityQueue<Integer> pqueue = new PriorityQueue<>((num1, num2)->map.get(num1)-map.get(num2)); // initialize the heap with less frequent element first but in max heap it would just opposite
-
          // now iterate map and put all in heap
          for(int num: map.keySet()){
              pqueue.add(num); // adding the values in priority queue ; TC: O(logk)
@@ -78,7 +75,6 @@ Output: [3, 1]
          for(int i=k-1;i>=0;--i){
              result.add(pqueue.poll());
          }
-
         return result;
      }
     public static void main(String[] args) {
