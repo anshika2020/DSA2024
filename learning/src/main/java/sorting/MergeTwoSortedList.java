@@ -25,8 +25,6 @@ suubclass to create Node
         public Node(final Object data, final Object o) {
         }
     }
-
-
     //addNode() will add a new node to the list
     public void addNode(int data) {
         //Create a new node
@@ -100,7 +98,6 @@ suubclass to create Node
         head2.next = new Node(5);
         head2.next.next = new Node(7);
         head2.next.next.next = new Node(8);
-
 
         display(head1);
         display(head2);
