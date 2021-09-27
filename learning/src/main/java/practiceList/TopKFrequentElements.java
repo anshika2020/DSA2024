@@ -11,6 +11,8 @@ Input: [1, 2, 3, 2, 4, 3, 1], 2
 Output: [3, 1]
      */
 
+    // Looking for thoughts to improve TC O(nlogn) to O(n)?
+
     static ArrayList<Integer> find_top_k_frequent_elements(ArrayList<Integer> arr, Integer k) {
         // Write your code here.
         HashMap<Integer, Integer> temp = new HashMap<>();
@@ -24,7 +26,7 @@ Output: [3, 1]
         List<Map.Entry<Integer, Integer>> list = new ArrayList<>(temp.entrySet()); // TC: O(n)
 
         // tc: it uses iterative merge sort hence it is O(nlogn)
-      //  list.sort(Map.Entry.comparingByValue());// sort the list by value
+      //  list.sort(Map.Entry.comparingByValue());// sort the list by value, this will sort with the ascending order
 
         list.sort(Map.Entry.comparingByValue(new Comparator<Integer>() {
             @Override
@@ -36,8 +38,6 @@ Output: [3, 1]
         for(int i =0; i<k; i++){
             result.add(list.get(i).getKey());
         }
-
-
 //        for(Map.Entry<Integer, Integer> entry :  list.subList(list.size()-k, list.size())){//TC: O(n)
 //            result.add(entry.getKey()); // TC: O(1)
 //        }
@@ -64,7 +64,6 @@ Output: [3, 1]
          Time complexity of both heap is O(nlogk)
           */
          PriorityQueue<Integer> pqueue = new PriorityQueue<>((num1, num2)->map.get(num1)-map.get(num2)); // initialize the heap with less frequent element first but in max heap it would just opposite
-
          // now iterate map and put all in heap
          for(int num: map.keySet()){
              pqueue.add(num); // adding the values in priority queue ; TC: O(logk)
@@ -76,24 +75,12 @@ Output: [3, 1]
          for(int i=k-1;i>=0;--i){
              result.add(pqueue.poll());
          }
-
         return result;
      }
-
-
-    // bucket sort approach
-//    static int [] find_top_k_frequent_elements(int[] arr, Integer k) {
-//        Map<Integer, Integer> map = new HashMap<>();
-//        for(int i=0;i<arr.length;i++){
-//            map.put(arr[i], map.getOrDefault(arr[i],0)+1);
-//        }
-//
-//    }
-
     public static void main(String[] args) {
         Integer [] arr = {1, 2, 3, 1,2, 4, 3,4, 4,1};
         ArrayList list= new ArrayList<>(Arrays.asList(arr));
         System.out.println(find_top_k_frequent_elements( list,2));
-       // System.out.println(find_top_k_frequent_elements1( list,2));
+        System.out.println(find_top_k_frequent_elements1( list,2));
     }
 }

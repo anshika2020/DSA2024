@@ -25,8 +25,6 @@ suubclass to create Node
         public Node(final Object data, final Object o) {
         }
     }
-
-
     //addNode() will add a new node to the list
     public void addNode(int data) {
         //Create a new node
@@ -60,6 +58,28 @@ suubclass to create Node
             return L2;
         }
     }
+
+    // iterative approach
+    private static Node mergeSortedTwoList(Node l1, Node l2){
+        // base case:
+        if(l1==null) return l2;
+        if (l2==null) return l1;
+        Node prev = new Node(-1);// maintain this prev as current node, in which we can add next node to it
+        Node mergedNodeList = prev; // set default value to replace with and easily return the head of merged list later
+        while(l1!=null &&l2!=null){// TC: this will run for the length of both list hence O(l1+l2) --> O(n)
+           //TC : O(1)
+            if(l1.data>=l2.data){ // check if l1.data is greater or equal to then add l2 data to prev node becaause the prev node is current node
+                prev.next = l2;
+                l2= l2.next;
+            }else{
+                prev.next = l1; // if l1 is less then point prev node to l1
+                l1= l1.next;
+            }
+            //TC : O(1)
+            prev = prev.next; // store next node of current/pev in prev which can be easily accessible by mergedNodeList, now mergedNodeList already has prev so get the next of mergedNodeList
+        }
+      return mergedNodeList.next;
+    }
     private static void display(Node node){
         while(node!=null){
             System.out.print(node.data+" ");
@@ -79,11 +99,11 @@ suubclass to create Node
         head2.next.next = new Node(7);
         head2.next.next.next = new Node(8);
 
-
         display(head1);
         display(head2);
 
-        display(mergeSortedList(head1,head2));
+        display(mergeSortedList(head1,head2)); // TC: O(n+m), SC: O(n+m) because mergeSortedList will not return until both l1 and l2 lists are reached to end hence it will consume more space
+        display(mergeSortedTwoList(head1,head2)); // TC: O(n+m) n and m are length of the lists, SC: O(n)
 
     }
 
