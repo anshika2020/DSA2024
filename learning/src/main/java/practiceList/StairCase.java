@@ -1,19 +1,18 @@
 package practiceList;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class StairCase {
-    int numOfWays = 0;
+    static int numOfWays = 0;
 
-    public int climbStairs(int n) {
+    public static int climbStairs(int n) {
         Map<Integer, Integer> map = new HashMap<>();
 
         noFoWaysClimb(n, map);
 
         return numOfWays;
     }
-    public void noFoWaysClimb(int n, Map<Integer, Integer> map){
+    public static void noFoWaysClimb(int n, Map<Integer, Integer> map){
         if(map.containsKey(n)){
             numOfWays+= map.get(n);
             return;
@@ -32,5 +31,9 @@ public class StairCase {
             noFoWaysClimb(n-2, map);
         }
         map.put(n,numOfWays);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(climbStairs(4));
     }
 }
