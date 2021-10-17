@@ -41,7 +41,6 @@ Solve the problem without allocating a “visited” matrix.*/
 
     public static int count_islands(List<List<Integer>> matrix) {
         int count = 0;
-        // Write your code here
         if (matrix.size() == 0) {
             return 0;
         }
