@@ -1,5 +1,6 @@
 package graphs;
 
+
 public class KnightOnChessBoard {
     /*
     MY SCHEDULE
@@ -29,8 +30,55 @@ If it is not possible to reach from starting position to ending position then re
      */
 
     static int find_minimum_number_of_moves(int rows, int cols, int start_row, int start_col, int end_row, int end_col) {
-        // Write your code here.
+        // create a list to store the moves
+        int result = Integer.MAX_VALUE;
+        int[][] chess = new int[rows][cols];
+        boolean[][] visited= new boolean[rows][cols];
+        int res=dfs(chess,  rows,  cols,start_row , start_col , end_row , end_col , 0, result,visited);
+        if(res==Integer.MAX_VALUE){
+            return -1;
+        }
+        else {
+            return res;
+        }
+    }
+    private static int dfs(int[][] chess, int rows,  int cols, int start_row, int start_col, int end_row, int end_col, int currentMove, int result,boolean[][] visited) {
 
-  return 0;
+        //if(start_row<0||start_col<0||start_row>=rows||start_col>=cols||chess[start_row][start_col]<=currentMove){
+        if(start_row<0||start_col<0||start_row>=rows||start_col>=cols|| visited[start_row][start_col]){
+            return result;
+        }
+
+        if(start_row==end_row && start_col==end_col){
+            result = Math.min(result,currentMove);
+            return result;
+        }
+
+
+        visited[start_row][start_col]=true;
+        // moving 2 steps in start_row and one step in coloumn  both sides up and down
+
+        //i+2 --> j+1 and j-1
+        int res=dfs(chess,  rows,  cols, start_row + 2, start_col + 1, end_row, end_col, currentMove+1,result,visited);
+        res=dfs(chess,  rows,  cols,start_row + 2, start_col - 1, end_row, end_col, currentMove+1,res,visited);
+        //  i-2  --> j+1 and j-
+        res= dfs(chess,  rows,  cols,start_row - 2, start_col + 1, end_row, end_col, currentMove+1,res,visited);
+        res= dfs(chess,  rows,  cols,start_row - 2, start_col - 1, end_row, end_col,currentMove+1,res,visited);
+
+        //  j+2  --> i+1 and i-1
+        res= dfs(chess,  rows,  cols,start_row + 1, start_col + 2, end_row, end_col,currentMove+1,res,visited);
+        res= dfs(chess,  rows,  cols,start_row - 1, start_col + 2, end_row, end_col,currentMove+1,res,visited);
+
+        //  j-2  --> i+1 and i-1
+        res=dfs(chess,  rows,  cols,start_row + 1, start_col - 2, end_row, end_col,currentMove+1,res,visited);
+        res=dfs(chess,  rows,  cols,start_row - 1, start_col - 2, end_row, end_col,currentMove+1,res,visited);
+
+        visited[start_row][start_col]=false;
+
+        return res;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(find_minimum_number_of_moves(5,5,0,0,4,1));
     }
 }
