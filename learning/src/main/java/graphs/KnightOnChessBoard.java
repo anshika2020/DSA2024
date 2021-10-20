@@ -79,6 +79,8 @@ If it is not possible to reach from starting position to ending position then re
     }
 
     public static void main(String[] args) {
-        System.out.println(find_minimum_number_of_moves(5,5,0,0,4,1));
+
+       // System.out.println(find_minimum_number_of_moves(5,5,0,0,4,1));
+        System.out.println(find_minimum_number_of_moves(33333,3,333,0,33332, 2));
     }
 }
