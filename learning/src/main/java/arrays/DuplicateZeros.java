@@ -39,18 +39,22 @@ public static int[] dupZeros(int[] arr){
        Queue<Integer> queue = new LinkedList<>();
        for(int i=0; i< arr.length;i++){
            queue.add(arr[i]);
-           if(arr[i]==0){
+         //  System.out.println("values in queue : "+ queue);
+           if(arr[i]==0) {
                queue.add(0);
-               arr[i] = queue.remove();
            }
+              // System.out.println("values in queue after arr[0] check: "+ queue);
+               arr[i] = queue.remove(); // it will remove the element which came first because queue work FIFO
+             //  System.out.println("value of arr[i] :" + arr[i]);
+
        }
        return arr;
    }
 
     public static void main(String[] args) {
         int arr[]= {1,0,2,3,0,4,5,0};
-        System.out.println(Arrays.toString(dupZeros(arr)));
-        // using queue
+     //   System.out.println(Arrays.toString(dupZeros(arr)));
+     //   // using queue
         System.out.println(Arrays.toString(duplicateZeros(arr)));
     }
 }

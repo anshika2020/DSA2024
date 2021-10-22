@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class ArraysInZigzag {
 
     /*
+    Given an array of DISTINCT elements, rearrange the elements of array in zig-zag fashion in O(n) time. The converted array should be in form a < b > c < d > e < f.
     Input: arr[] = {4, 3, 7, 8, 6, 2, 1}
-Output: arr[] = {3, 7, 4, 8, 2, 6, 1}
-
+    Output: arr[] = {3, 7, 4, 8, 2, 6, 1}
      */
 
-    // simple solution isto just keep on swaping with next number whether less than previous element or greater than previous,
+    // simple solution is to just keep on swaping with next number whether less than previous element or greater than previous,
     // keep on tracking with flag to see if the number alrready have been swapped
     public static int[] getZigzag(int num[]){
         if(num.length<=1){

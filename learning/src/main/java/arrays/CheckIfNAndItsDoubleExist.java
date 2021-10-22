@@ -62,7 +62,7 @@ Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.
     }
 
     public static void main(String[] args) {
-        int arr[] ={2,3,3,0,0};// {-2,0,10,-19,4,6,-8}; //{7,1,14,11}; //{0,0}
+        int arr[] ={10,2,5,3};//{2,3,3,0,0};// {-2,0,10,-19,4,6,-8}; //{7,1,14,11}; //{0,0}
         System.out.println(checkDouble1(arr));
     }
 }
