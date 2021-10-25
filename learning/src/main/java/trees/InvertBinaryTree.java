@@ -2,16 +2,24 @@ package trees;
 
 public class InvertBinaryTree {
 
-    public static treeProgams.Node invertBT(treeProgams.Node root){
+    static class Node {
+        int data;
+        Node left;
+        Node right;
 
+        public Node(int d) {
+            this.data = d;
+        }
+    }
 
+    public static Node invertBT(Node root){
       if(root==null){
           return null;
       }
 
         System.out.println("root data: "+ root.data);
-        treeProgams.Node left =invertBT(root.left); // first get all the left nodes
-        treeProgams.Node right = invertBT(root.right);// get all the right nodes
+        Node left =invertBT(root.left); // first get all the left nodes
+        Node right = invertBT(root.right);// get all the right nodes
       root.left = right;
       root.right = left;
         System.out.println("root return :" + root.data);
@@ -19,7 +27,7 @@ public class InvertBinaryTree {
       return root;
     }
 
-    public static void preOrderTraversal(treeProgams.Node root){
+    public static void preOrderTraversal(Node root){
         if(root==null){
             return;
         }
@@ -29,13 +37,13 @@ public class InvertBinaryTree {
     }
 
     public static void main(String arg[]){
-        treeProgams.Node node = new treeProgams.Node(4);
-        node.left = new treeProgams.Node(2);
-        node.left.left = new treeProgams.Node(1);
-        node.left.right = new treeProgams.Node(3);
-        node.right = new treeProgams.Node(7);
-        node.right.left = new treeProgams.Node(6);
-        node.right.right = new treeProgams.Node(9);
+        Node node = new Node(4);
+        node.left = new Node(2);
+        node.left.left = new Node(1);
+        node.left.right = new Node(3);
+        node.right = new Node(7);
+        node.right.left = new Node(6);
+        node.right.right = new Node(9);
 
         preOrderTraversal(node);
 

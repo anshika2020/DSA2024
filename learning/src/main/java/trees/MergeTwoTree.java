@@ -3,8 +3,16 @@ package trees;
 
 public class MergeTwoTree {
 
+    static class Node {
+        int data;
+        Node left;
+        Node right;
 
-    public static LinkedListDS.Node mergeTrees(LinkedListDS.Node t1, LinkedListDS.Node t2) {
+        public Node(int d) {
+            this.data = d;
+        }
+    }
+    public static Node mergeTrees(Node t1, Node t2) {
 
 
         if (t1 == null){
@@ -40,7 +48,7 @@ public class MergeTwoTree {
         return t1;
     }
 
-    public static void preOder(LinkedListDS.Node n){
+    public static void preOder(Node n){
         if(n==null){
             return;
         }
@@ -50,22 +58,22 @@ public class MergeTwoTree {
     }
     public static void main(String str[]){
 
-        LinkedListDS.Node t1 = new LinkedListDS.Node(1);
-        t1.left=new LinkedListDS.Node(2);
-        t1.left.right = new LinkedListDS.Node(5);
+        Node t1 = new Node(1);
+        t1.left=new Node(2);
+        t1.left.right = new Node(5);
         //t1.left.right.left = new Node(7);
-        t1.left.left = new LinkedListDS.Node(4);
-        t1.right=new LinkedListDS.Node(3);
+        t1.left.left = new Node(4);
+        t1.right=new Node(3);
 
 
-        LinkedListDS.Node t2 = new LinkedListDS.Node(5);
-        t2.left = new LinkedListDS.Node(3);
-        t2.left.left = new LinkedListDS.Node(2);
-        t2.right = new LinkedListDS.Node(6);
-        t2.right.left =new LinkedListDS.Node(1);
-        t2.right.left.left = new LinkedListDS.Node(7);
-        t2.right.left.left.left = new LinkedListDS.Node(8);
-        t2.right.right =new LinkedListDS.Node(4);
+        Node t2 = new Node(5);
+        t2.left = new Node(3);
+        t2.left.left = new Node(2);
+        t2.right = new Node(6);
+        t2.right.left =new Node(1);
+        t2.right.left.left = new Node(7);
+        t2.right.left.left.left = new Node(8);
+        t2.right.right =new Node(4);
 
         preOder(t1);
         System.out.println("\n");

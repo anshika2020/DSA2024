@@ -10,7 +10,7 @@ class Node
 }
 
 // Linked List class
-class LinkedList
+class LinkedList1
 {
     Node head; // head of list
 
@@ -51,7 +51,7 @@ class LinkedList
     public static void main(String[] args)
     {
         /* Start with the empty list */
-        LinkedList llist = new LinkedList();
+        LinkedList1 llist = new LinkedList1();
         llist.push(1);
         llist.push(3);
         llist.push(1);

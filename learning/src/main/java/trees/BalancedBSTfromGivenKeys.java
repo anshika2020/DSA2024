@@ -2,15 +2,24 @@ package trees;
 
 public class BalancedBSTfromGivenKeys {
 
+    static class Node {
+        int data;
+        Node left;
+        Node right;
+
+        public Node(int d) {
+            this.data = d;
+        }
+    }
     /*
     Given an unsorted integer array that represents binary search tree keys, construct a heighted balanced BST from it.
 
 
      */
  // insert a node and we need one root and value
-    public static LinkedListDS.Node insert(LinkedListDS.Node root, int keys){
+    public static Node insert(Node root, int keys){
         if(root==null){ // check if the root is null then create new node with value
-            return new LinkedListDS.Node(keys); // creating new Node
+            return new Node(keys); // creating new Node
         }
         System.out.println("Rootdata: "+ root.data);
         if(keys< root.data) { // if array value
@@ -23,7 +32,7 @@ public class BalancedBSTfromGivenKeys {
         return root;
     }
 
-    public static void inorder(LinkedListDS.Node root){
+    public static void inorder(Node root){
         if(root==null){
             return;
         }
@@ -35,7 +44,7 @@ public class BalancedBSTfromGivenKeys {
     public static void main(String args[]){
         int keys[] = { 15, 10, 20, 8, 12, 16, 25 };
 
-        LinkedListDS.Node root = null;
+        Node root = null;
         for(int key:keys){
             root = insert(root,key);
         }

@@ -51,7 +51,7 @@ public class ZigZiagLevelOrderTraversal {
        // create a list of list
        List<List<Integer>> results = new ArrayList<>();
        if(root==null) return results;
-       Queue<TreeNode> queue = new LinkedListDS.LinkedList<>();
+       Queue<TreeNode> queue = new LinkedList<>();
        queue.add(root);
        boolean reverse= false;
        while (!queue.isEmpty()){

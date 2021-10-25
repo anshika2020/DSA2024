@@ -2,8 +2,16 @@ package trees;
 
 public class BstHeight {
 
+    static class Node {
+        int data;
+        Node left;
+        Node right;
 
-    public static int getHeight(LinkedListDS.Node root){
+        public Node(int d) {
+            this.data = d;
+        }
+    }
+    public static int getHeight(Node root){
         // Base case: empty tree has height 0
         if(root==null){
             return 0;
@@ -13,7 +21,7 @@ public class BstHeight {
     }
 
     // another approach
-    public static int height(LinkedListDS.Node root){
+    public static int height(Node root){
         if(root==null){
             return 0;
         }
@@ -28,11 +36,11 @@ public class BstHeight {
     }
 
     public static void main(String arg[]){
-        LinkedListDS.Node node = new LinkedListDS.Node(5);
-        node.left = new LinkedListDS.Node(3);
+        Node node = new Node(5);
+        node.left = new Node(3);
        // node.left.left = new Node(1);
       //  node.left.right = new Node(4);
-        node.right = new LinkedListDS.Node(8);
+        node.right = new Node(8);
        // node.right.left = new Node(6);
       //  node.right = new Node(9);
         System.out.println(getHeight(node));

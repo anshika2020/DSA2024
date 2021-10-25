@@ -4,7 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LeafSimilarTrees {
+    static class Node {
+        int data;
+        Node left;
+        Node right;
 
+        public Node(int d) {
+            this.data = d;
+        }
+    }
     /*
     consider all leaves of binay tree, from left to right order, the values of those leaves from a leaf value sequence
     for example
@@ -34,7 +42,7 @@ public class LeafSimilarTrees {
 
      */
 
-    public static boolean areleafSimilar(LinkedListDS.Node tree1, LinkedListDS.Node tree2){
+    public static boolean areleafSimilar(Node tree1, Node tree2){
 
         List<Integer> leaves1 =new ArrayList<>();
         List<Integer> leaves2=new ArrayList<>();
@@ -53,7 +61,7 @@ public class LeafSimilarTrees {
 
     }
 
-    private static void addLeaves(final LinkedListDS.Node tree, final List<Integer> leaves) {
+    private static void addLeaves(final Node tree, final List<Integer> leaves) {
 
         if(tree==null){
             return;
@@ -66,7 +74,7 @@ public class LeafSimilarTrees {
         addLeaves(tree.right,leaves);
     }
 
-    public static void inorderTraversal(LinkedListDS.Node node){
+    public static void inorderTraversal(Node node){
        if(node==null){
            return;
        }
@@ -76,27 +84,27 @@ public class LeafSimilarTrees {
     }
 
     public static void main(String args[]){
-        LinkedListDS.Node t1 = new LinkedListDS.Node(3);
-        t1.left = new LinkedListDS.Node(5);
-        t1.left.left = new LinkedListDS.Node(6);
-        t1.left.right = new LinkedListDS.Node(2);
-        t1.left.right.left = new LinkedListDS.Node(7);
-        t1.left.right.right = new LinkedListDS.Node(4);
-        t1.right = new LinkedListDS.Node(1);
-        t1.right.left = new LinkedListDS.Node(9);
-        t1.right.right = new LinkedListDS.Node(8);
+        Node t1 = new Node(3);
+        t1.left = new Node(5);
+        t1.left.left = new Node(6);
+        t1.left.right = new Node(2);
+        t1.left.right.left = new Node(7);
+        t1.left.right.right = new Node(4);
+        t1.right = new Node(1);
+        t1.right.left = new Node(9);
+        t1.right.right = new Node(8);
 
 
 
-        LinkedListDS.Node t2 = new LinkedListDS.Node(3);
-        t2.left = new LinkedListDS.Node(5);
-        t2.left.left = new LinkedListDS.Node(6);
-        t2.left.right = new LinkedListDS.Node(7);
-        t2.right = new LinkedListDS.Node(1);
-        t2.right.left = new LinkedListDS.Node(4);
-        t2.right.right = new LinkedListDS.Node(2);
-        t2.right.right.left = new LinkedListDS.Node(9);
-        t2.right.right.right = new LinkedListDS.Node(8);
+        Node t2 = new Node(3);
+        t2.left = new Node(5);
+        t2.left.left = new Node(6);
+        t2.left.right = new Node(7);
+        t2.right = new Node(1);
+        t2.right.left = new Node(4);
+        t2.right.right = new Node(2);
+        t2.right.right.left = new Node(9);
+        t2.right.right.right = new Node(8);
 
         inorderTraversal(t1);
         System.out.println("\n");

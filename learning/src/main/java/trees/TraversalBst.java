@@ -2,11 +2,19 @@ package trees;
 
 public class TraversalBst {
 
+    static class Node {
+        int data;
+        Node left;
+        Node right;
 
+        public Node(int d) {
+            this.data = d;
+        }
+    }
     // tree insersion
-    public static LinkedListDS.Node insert(LinkedListDS.Node root, int key){
+    public static Node insert(Node root, int key){
         if(root==null){
-            return new LinkedListDS.Node(key);
+            return new Node(key);
         }
         if(key< root.data){
             root.left = insert(root.left,key);
@@ -25,7 +33,7 @@ public class TraversalBst {
     4. traverse right sub tree
      */
 
-    public static void inorder(LinkedListDS.Node root){
+    public static void inorder(Node root){
         if(root==null){
             return;
         }
@@ -50,7 +58,7 @@ public class TraversalBst {
     4.Traverse right sub tree
      */
 
-    public static void preorder(LinkedListDS.Node root){
+    public static void preorder(Node root){
         if(root==null){
             return;
         }
@@ -68,7 +76,7 @@ public class TraversalBst {
     4.Print value of the root data or visit the root
      */
 
-    public static void postTraversal(LinkedListDS.Node node){
+    public static void postTraversal(Node node){
         if(node==null){
             return;
         }
@@ -85,11 +93,11 @@ public class TraversalBst {
 //           root = insert(root,key);
 //        }
 
-       LinkedListDS.Node root1 = new LinkedListDS.Node(3);
-        root1.left = new LinkedListDS.Node(9);
-        root1.right = new LinkedListDS.Node(20);
-        root1.right.left = new LinkedListDS.Node(15);
-        root1.right.right = new LinkedListDS.Node(7);
+       Node root1 = new Node(3);
+        root1.left = new Node(9);
+        root1.right = new Node(20);
+        root1.right.left = new Node(15);
+        root1.right.right = new Node(7);
         System.out.println("Inorder traversal :");
         inorder(root1);
         System.out.println("\nPreorder traversal :");

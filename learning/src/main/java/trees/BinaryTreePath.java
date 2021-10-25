@@ -18,7 +18,15 @@ Output: ["1->2->5", "1->3"]
 Explanation: All root-to-leaf paths are: 1->2->5, 1->3
      */
 
-    public static List<String> binaryTreePaths(LinkedListDS.Node root) {
+    static class Node {
+        int data;
+       Node left;
+       Node right;
+        public Node(int d) {
+            this.data = d;
+        }
+    }
+    public static List<String> binaryTreePaths(Node root) {
         List<String> list = new ArrayList<>();
 
          if(root==null){
@@ -37,7 +45,7 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
          }
          return list;
     }
-    public static void getPathWithDfs(LinkedListDS.Node root, String currPath, List<String> list){
+    public static void getPathWithDfs(Node root, String currPath, List<String> list){
         currPath+= "->"+ root.data;
 
 
@@ -54,13 +62,13 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
     }
 
    public static void main(String str[]){
-       LinkedListDS.Node node = new LinkedListDS.Node(1);
-       node.left = new LinkedListDS.Node(3);
+       Node node = new Node(1);
+       node.left = new Node(3);
       // node.left.right = new Node(5);
       // node.left.left = new Node(1);
 
-       node.right = new LinkedListDS.Node(3);
-       node.right.right = new LinkedListDS.Node(2);
+       node.right = new Node(3);
+       node.right.right = new Node(2);
        System.out.println(binaryTreePaths(node));
    }
 }

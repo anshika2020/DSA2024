@@ -55,7 +55,7 @@ title __LINKEDLISTDS's Class Diagram__\n
 
   namespace  {
     namespace inkedListDS {
-      class LinkedListDS.LinkedList {
+      class LinkedListDS.LinkedList1 {
           + LinkedList()
           + addNode()
           + getHead()
@@ -66,7 +66,7 @@ title __LINKEDLISTDS's Class Diagram__\n
 
   namespace  {
     namespace inkedListDS {
-      class LinkedListDS.LinkedList.Node {
+      class LinkedListDS.LinkedList1.Node {
           - data : String
           + Node()
           + getData()
@@ -149,10 +149,10 @@ title __LINKEDLISTDS's Class Diagram__\n
   LinkedListDS.InsertANodeAtPosition +-down- LinkedListDS.InsertANodeAtPosition.Node
   LinkedListDS.InsertANodeAtPosition.LinkedList o-- LinkedListDS.InsertANodeAtPosition.Node : head
   LinkedListDS.InsertANodeAtPosition.Node o-- LinkedListDS.InsertANodeAtPosition.Node : next
-  LinkedListDS.LinkedList o-- LinkedListDS.LinkedList.Node : head
-  LinkedListDS.LinkedList o-- LinkedListDS.LinkedList.Node : tail
-  LinkedListDS.LinkedList +-down- LinkedListDS.LinkedList.Node
-  LinkedListDS.LinkedList.Node o-- LinkedListDS.LinkedList.Node : next
+  LinkedListDS.LinkedList1 o-- LinkedListDS.LinkedList1.Node : head
+  LinkedListDS.LinkedList1 o-- LinkedListDS.LinkedList1.Node : tail
+  LinkedListDS.LinkedList1 +-down- LinkedListDS.LinkedList1.Node
+  LinkedListDS.LinkedList1.Node o-- LinkedListDS.LinkedList1.Node : next
   LinkedListDS.NodesLength +-down- LinkedListDS.NodesLength.LinkedList
   LinkedListDS.NodesLength +-down- LinkedListDS.NodesLength.Node
   LinkedListDS.NodesLength.LinkedList o-- LinkedListDS.NodesLength.Node : head

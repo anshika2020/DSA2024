@@ -32,7 +32,7 @@ BFS is kind of divide and conquere appraoch as lazy manager
         // create a list of list to store the result
           List<List<Integer>> results = new ArrayList<>();
         // create a queue (FIFO)
-        Queue<TreeNode> queue = new LinkedListDS.LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         // add root to queue
         queue.add(root);
         // check while queue is not empty

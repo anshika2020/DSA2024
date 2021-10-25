@@ -1,9 +1,17 @@
 package trees;
 
 public class SameTree {
+    static class Node {
+        int data;
+        Node left;
+        Node right;
 
+        public Node(int d) {
+            this.data = d;
+        }
+    }
 
-    public static boolean areTreesSame(treeProgams.Node p, treeProgams.Node q){
+    public static boolean areTreesSame(Node p, Node q){
         int count=0;
         if(p==null&&q==null){
             return true;
@@ -38,13 +46,13 @@ public class SameTree {
 
 
     public static void main(String args[]){
-        treeProgams.Node p = new treeProgams.Node(1);
-        p.left = new treeProgams.Node(2);
-        p.right= new treeProgams.Node(3);
+        Node p = new Node(1);
+        p.left = new Node(2);
+        p.right= new Node(3);
 
-        treeProgams.Node q = new treeProgams.Node(1);
-        q.left = new treeProgams.Node(2);
-        q.right= new treeProgams.Node(3);
+        Node q = new Node(1);
+        q.left = new Node(2);
+        q.right= new Node(3);
         System.out.println(areTreesSame(p,q));
     }
 }

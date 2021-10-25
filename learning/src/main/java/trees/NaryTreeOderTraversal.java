@@ -8,7 +8,7 @@ public class NaryTreeOderTraversal {
      */
     static class TreeNode {
         int val;
-        List<TreeNode> children = new LinkedListDS.LinkedList<>();
+        List<TreeNode> children = new LinkedList<>();
 
         public TreeNode(int val, List<TreeNode> children) {
             this.val = val;
