@@ -12,7 +12,7 @@ public class MergeSortingAlgo {
         if(len<2){
             return arr;
         }
-        int mid = len / 2;
+        int mid = len/2;
         int[] lArray = new int[mid]; // create array to store first half subarray
         int[] rArray = new int[len - mid]; // create array to store second half subarray
 
@@ -31,7 +31,7 @@ public class MergeSortingAlgo {
 
     private static void mergeBothSubArray(int[] arr, int[] lArray, int[] rArray, int left, int right) {
         int i = 0, j = 0, k = 0;
-        while (i < left && j < right) { // loop till i and j are less than left and right
+        while (i < left && j < right) { // loop till i and j are     less than left and right
             if (lArray[i] <= rArray[j]) { // check if
                 arr[k++] = lArray[i++];
             }

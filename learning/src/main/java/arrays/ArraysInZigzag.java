@@ -11,7 +11,7 @@ public class ArraysInZigzag {
      */
 
     // simple solution is to just keep on swaping with next number whether less than previous element or greater than previous,
-    // keep on tracking with flag to see if the number alrready have been swapped
+    // keep on tracking with flag to see if the number already have been swapped
     public static int[] getZigzag(int num[]){
         if(num.length<=1){
             return null;
@@ -42,6 +42,7 @@ public class ArraysInZigzag {
 
     public static void main(String[] args) {
         int num [] = {4, 3, 7, 8, 6, 2, 1};
+     //    int num [] = {4, 3};
         System.out.println(Arrays.toString(getZigzag(num)));
     }
 }
