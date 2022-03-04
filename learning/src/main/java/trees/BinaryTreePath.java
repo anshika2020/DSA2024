@@ -61,6 +61,28 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 
     }
 
+    // find binary tree path
+    public static List<String> findPaths(Node root){
+        List<String> result = new ArrayList<>();
+        helper(root, result, "");
+        return result;
+    }
+    public static void helper(Node root,List<String> result,String path){
+        // first check root node is not null
+        if(root==null) return;
+
+        // first aadd the root val in path
+        path+=root.data;
+        // now get all left and right node values
+        if(root.left==null&&root.right==null){
+            result.add(path);
+        }else{
+            path+="-->";
+            helper(root.left, result, path);
+            helper(root.right, result, path);
+        }
+    }
+
    public static void main(String str[]){
        Node node = new Node(1);
        node.left = new Node(3);
@@ -70,5 +92,7 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
        node.right = new Node(3);
        node.right.right = new Node(2);
        System.out.println(binaryTreePaths(node));
+       System.out.println(
+               findPaths(node));
    }
 }

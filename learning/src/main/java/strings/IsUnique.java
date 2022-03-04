@@ -72,7 +72,6 @@ Typically, ASCII characters are 256, so we use our Hash array size as 256. But i
         Set<Character> set = new HashSet<Character>();
         for(int i=0; i<str.length();i++){
             set.add(str.charAt(i));
-            String str1 = "a";
 
         }
         System.out.println("size of the set :" + set.size() + "str size: "+ str.length());

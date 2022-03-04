@@ -6,6 +6,7 @@ import java.util.Set;
 public class CheckIfNAndItsDoubleExist {
 
     /*
+    LC_1346. Check If N and Its Double Exist
     Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
 More formally check if there exists two indices i and j such that :
 
@@ -62,7 +63,8 @@ Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.
     }
 
     public static void main(String[] args) {
-        int arr[] ={10,2,5,3};//{2,3,3,0,0};// {-2,0,10,-19,4,6,-8}; //{7,1,14,11}; //{0,0}
+        int arr[] ={10,3,5,3};//{2,3,3,0,0};// {-2,0,10,-19,4,6,-8}; //{7,1,14,11}; //{0,0}
         System.out.println(checkDouble1(arr));
+        System.out.println(checkDouble(arr));
     }
 }

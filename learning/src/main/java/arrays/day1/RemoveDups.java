@@ -14,9 +14,11 @@ public class RemoveDups {
                 nums[counter] = nums[i+1];
                 counter++;
             }else{
+                System.out.println(nums[i]);
                 dups++;
             }
         }
+        System.out.println("dupes: " + dups);
         return nums.length-dups;
     }
 

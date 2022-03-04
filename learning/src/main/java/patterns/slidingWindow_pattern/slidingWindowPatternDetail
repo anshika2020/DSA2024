@@ -1,0 +1,44 @@
+What is sliding window pattern?
+Ans:
+1. The main idea behind the sliding window is reduce two for loops to one single for loop.
+2. The sliding window is used to perform a required operation on specific window size of given array or linkedlist for ex. finding the longest subarray
+3. The window size can remains constant, shrink or grow.
+
+How to identify the pattern in problems?
+1. The problem input is linear data structure
+2. You’re asked to find the longest/shortest substring, subarray, or a desired value
+
+Common examples:
+* Maximum sum subarray of size ‘K’ (easy)
+* Longest substring with ‘K’ distinct characters (medium)
+* String anagrams (hard)
+
+
+TODO list:
+1. Maximum Sum Subarray of Size K (easy)
+2.Smallest Subarray With a Greater Sum (easy)
+3.Longest Substring with maximum K Distinct Characters (medium)
+4.Fruits into Baskets (medium)
+5.Longest Substring with Distinct Characters (hard)
+6.Longest Substring with Same Letters after Replacement (hard)
+7. Longest Subarray with Ones after Replacement (hard)
+Leetcode:
+8.https://leetcode.com/problems/longest-substring-without-repeating-characters
+9.https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
+10.Repeated DNA Sequences
+11.Minimum Size Subarray Sum
+12.Contains Duplicate II
+13.Contains Duplicate III
+14.	Sliding Window Maximum
+15.Longest Substring with At Most K Distinct Characters
+16.Longest Substring with At Least K Repeating Characters
+17.Longest Repeating Character Replacement
+18.Find All Anagrams in a String
+19.Max Consecutive Ones II
+20.Permutation in String
+21.Maximum Average Subarray I
+22.Subarray Product Less Than K
+23.Maximum Length of Repeated Subarray
+24.New 21 Game
+25.Fruit Into Baskets
+26.Maximum Points You Can Obtain from Cards

@@ -66,6 +66,7 @@ public class BinarySearchPgm {
             System.out.println("elem not found in the array " + result);
         } else {
             System.out.println("The elem's position is @ " + result);
+
         }
 
 

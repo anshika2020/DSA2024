@@ -57,11 +57,11 @@ public class QuickSorting {
         int pivot  = arr[(left+right)/2];//pick pivot point
         System.out.println("pivot in partinion: :"+pivot);
         while(left<=right){
-            System.out.println(" left "+ left +" right "+ right );
+       //     System.out.println(" left "+ left +" right "+ right );
             //find element on left that should be on right
-            System.out.println(" arr[left] "+arr[left] +"::  arr[right] "+arr[right]);
-            System.out.println(" arr[left]<pivot "+ (arr[left]<pivot) );
-            System.out.println(" arr[right]>pivot "+ (arr[right]>pivot) );
+//            System.out.println(" arr[left] "+arr[left] +"::  arr[right] "+arr[right]);
+//            System.out.println(" arr[left]<pivot "+ (arr[left]<pivot) );
+//            System.out.println(" arr[right]>pivot "+ (arr[right]>pivot) );
             if (arr[left]<pivot){  // check if the left element is less than pivot
                 left++;
             }

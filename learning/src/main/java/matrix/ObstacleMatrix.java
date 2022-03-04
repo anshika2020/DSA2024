@@ -1,4 +1,4 @@
-package graphs;
+package matrix;
 
 public class ObstacleMatrix {
 /*

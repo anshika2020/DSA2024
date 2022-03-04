@@ -1,9 +1,6 @@
 package strings;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Set;
+import java.util.*;
 
 public class ReccuringCharsInStr {
 
@@ -43,24 +40,25 @@ public static char getReccurChar(final String str){
 //using hashtable or dictionary
     public static char getRecurringCharUsingHash(final String str){
         final Set<Character> set = new HashSet();
-        char ch =0; char[] chars = new char[str.length()];
-        chars = str.toCharArray();
-//        if(str.contains("[^A-Za-z0-9]")||str.contains("^[^<>{}\"/|;:.,~!?@#$%^=&*\\]\\()\\[¿§«»ω⊙¤°℃℉€¥£¢¡®©0-9_+]*$")){
-//
-//             chars = str.toCharArray();
-//        }else{
-//            System.out.println("no array");
-//        }
+        char ch =0;
+        char[] chars = str.toCharArray();
+        Set<Character> allRecu = new HashSet<>();
         for(char character: chars){
             if(set.contains(character)){
                 ch = character;
+                allRecu.add(ch);
             }else{
                 set.add(character);
                 ch='0';
             }
+
         }
-        System.out.println("values in set:"+ set.toString());
+        System.out.println("values in set:"+ allRecu.toString());
        return ch;
     }
 
+
+    public static void main(String[] args) {
+        System.out.println(getRecurringCharUsingHash("Abcbbdc"));
+    }
 }

@@ -28,8 +28,9 @@ public class SortXIncrementalYDecre {
     }
 
     public static void main(String[] args) {
-        int nums[][] = {
-                {1,2},{2,3},{1,4}};
+        int nums[][] = {{1,4},{1,3},{1,2}};
+               // {1,2},{2,3},{1,4}};
+        System.out.println(Arrays.deepToString(sortXandYInArray(nums)));
         for(int num[] : sortXandYInArray(nums)) {
             System.out.print(Arrays.toString(num));
         }
