@@ -26,6 +26,7 @@ nums = [6, 2, 5, 3, 1], return [[1, 2], [2, 3], [5, 6]].
         for(int i=0 ; i< nums.length-1;i++){ // O(n)
             ArrayList<Integer> temp = new ArrayList<>();
             int diff = nums[i+1]-nums[i];
+            System.out.println("list" + temp);
             if(diff<=min){
                 min =diff;
                 temp.add(nums[i]); // O(1)

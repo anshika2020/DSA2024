@@ -20,6 +20,7 @@ Therefore only 12 and 7896 contain an even number of digits.
             return 0;
         }
         for(int i:arr){
+
             if(String.valueOf(i).length()%2==0){ // get the length of integer by converting to String , then divide by 2 if zero remainder then increase the counter by 1;
                 count+=1; // or count++
             }

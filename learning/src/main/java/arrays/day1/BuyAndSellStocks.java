@@ -17,6 +17,7 @@ public static int getMaxProfit(int []prices){
     int min = Integer.MAX_VALUE;
     int max = 0;
     for(int i=0;i<prices.length;i++){
+        System.out.println("(prices[i]-min :" +(prices[i]-min)+"  prices[i] : "+ prices[i] + "::min "+min);
         if(prices[i]<min){
             min = prices[i];
         }else if(prices[i]-min>max){
