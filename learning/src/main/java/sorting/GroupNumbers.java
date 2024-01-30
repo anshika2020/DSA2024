@@ -5,7 +5,8 @@ import java.util.Arrays;
 
 public class GroupNumbers {
     /*
-    you are given an int arr of size n , group and rearrange them in way that all even goes to left and odds goes to right. The operation should be in-place.
+    you are given an int arr of size n , group and rearrange them in way that all even goes to left and odds goes to right.
+    The operation should be in-place.
     Algo:
     1.
      */

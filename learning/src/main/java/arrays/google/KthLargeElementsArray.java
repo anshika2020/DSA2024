@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class KthLargestElementArray {
+public class KthLargeElementsArray {
 /*
 k largest elements
 Medium Accuracy: 53.0% Submissions: 34893 Points: 4
@@ -61,22 +61,27 @@ Params : int n, int[] arr, int k is for number of top elements
     public  int[] findKthLargestElement(int n, int[] arr, int k){
         int[] ans = new int[k];
         // create a priority queue object
-        PriorityQueue<Integer> q= new PriorityQueue<>(Collections.reverseOrder());
-        for(int i=0;i<arr.length;i++){ // O(log N)
-            q.add(arr[i]); // adding will
+        PriorityQueue<Integer> q= new PriorityQueue<>(Collections.reverseOrder());// sorting take O(N) it is using
+        for(int i=0;i<arr.length;i++){ // O(N)
+            q.add(arr[i]); // adding will be constant
         }
 
-        for(int i=0; i<k;i++){
-            ans[i]= q.poll();
+        for(Integer s : q) {
+            System.out.println("in queue:");
+            System.out.println(s);
+        }
+        for(int i=0; i<k;i++){ // O(N)
+            ans[i]= q.poll(); // polling is also O(1)
 
         }
 
         return ans;
-
     }
-    public static void main(String [] args){
+
+
+        public static void main(String [] args){
         int[] num = {12, 5, 787, 1, 23};
-        KthLargestElementArray kth =new KthLargestElementArray();
+        KthLargeElementsArray kth =new KthLargeElementsArray();
         System.out.println(Arrays.toString(kth.findKthLargestElement(5,num, 2)));
     }
 

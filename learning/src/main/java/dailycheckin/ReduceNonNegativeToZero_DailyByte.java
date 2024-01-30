@@ -2,7 +2,8 @@ package dailycheckin;
 
 public class ReduceNonNegativeToZero_DailyByte {
     /*
-    Given a non-negative integer, num, return the number of operations it takes to reduce it to zero. If num is even, divide it by two. If num is odd, subtract one from it. Continue this process until num is zero.
+    Given a non-negative integer, num, return the number of operations it takes to reduce it to zero.
+    If num is even, divide it by two. If num is odd, subtract one from it. Continue this process until num is zero.
 
 Ex: Given the following num…
 
@@ -13,7 +14,7 @@ num = 16, return 5.(16/2=8, 8/2=4, 4/2=2,2/2=1, 1-1=0)
      */
 
     public static int reduceToZero(int num){
-         int cnt=0; int ans=0;
+         int cnt=0;
         if(num%2==0){
             int val =num/2;
             while(val!=0){

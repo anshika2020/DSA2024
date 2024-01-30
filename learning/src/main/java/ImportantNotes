@@ -1,11 +1,22 @@
 Permutation formula :
+where,
 
+n is the size of the set from which elements are permuted
+r is the size of each permutation
+! is factorial operator
 P(n,r) = n!/(n-r)!
+
+Permutations
+A permutation is an arrangement in a definite order of a number of objects taken some or all at a time. Let us take 10 numbers: 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9. The number of different 4-digit-PIN which can be formed using these 10 numbers is 5040. P(10,4) = 5040. This is a simple example of permutations. The permutations of 4 numbers taken from 10 numbers equal to the factorial of 10 divided by the factorial of the difference of 10 and 4.
+The permutations is easily calculated using \(^nP_r = \frac{n!}{(n - r)!}\).
 
 Combination :
 C(n,r) = n!/r!(n-r)!
 
 5*4*3*2*1  80/2*6
+
+A combination is all about grouping. The number of different groups which can be formed from the available things can be calculated using combinations. Let us try to understand this with a simple example. A team of 2 is formed from 5 students(William, James, Noah, Logan, and Oliver). This the combination of 'r' persons from the available 'n' persons is given as \(^nC_r = \frac{n!}{r!.(n - r)!}\)
+ The combinations can happen in the following 10 ways by which the team of 2 could be formed.
 
 subset : 2^n
 
@@ -13,3 +24,14 @@ subset : 2^n
 queue is FIFO
 stack is LIFO
 
+
+Sorting methods uses algorithm internally:
+Arrays.sort() : TC: for both apporaches O(n log n)
+Uses Quicksort for primitive data types and Timsort for objects. Quicksort is not stable algorithm but timsort is stable algorithm
+Collections.sort converts Lists into arrays then calls Arrays.sort
+
+Collections.reveredOrder():
+The time complexity of this algorithm is O(n) as the Collections.reverse() method takes a mutable list as an argument and reverses its order in linear time.
+
+Lexicographical Odering:
+In lexicographic sorting, the numbers are compared digit by digit from left to right, and the order is determined based on the first differing digit. like For example, when lexicographically sorting the numbers 1, 10, 2.Those values are in lexicographical order. 10 comes after 2 in numerical order, but 10 comes before 2 in "alphabetical" order.

@@ -1,7 +1,7 @@
 package LinkedListDS;
 
 
-public class LinkedList {
+public class LinkedList<P>{
     private Node head;
     private Node tail;
    public LinkedList(){

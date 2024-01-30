@@ -23,10 +23,9 @@ The third distinct maximum is 1.
            pq.add(i);
        }
        int num=0;
-       for(int i=0;i<3;i++){
-            num= pq.poll();
+       for(int i=0;i<3;i++) {
+           num = pq.poll();
        }
-
        return num;
    }
 

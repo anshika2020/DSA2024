@@ -61,6 +61,7 @@ BFS is kind of divide and conquere appraoch as lazy manager
         while(!queue.isEmpty()){
             List<Integer> temp = new ArrayList<>();
             int count = queue.size();
+            System.out.println("queue size() : " + count);
             for(int i=0; i<count;i++){
                 TreeNode node = queue.remove();
                 temp.add(node.data);
