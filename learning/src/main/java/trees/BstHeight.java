@@ -47,5 +47,4 @@ public class BstHeight {
         System.out.println(height(node));
 
     }
-
 }
