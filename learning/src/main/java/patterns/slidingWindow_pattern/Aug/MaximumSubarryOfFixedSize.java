@@ -7,7 +7,7 @@ public class MaximumSubarryOfFixedSize {
      [4,2,1,7,8,1,2,8,1,0]
 
      subarrays = [[4,2,1],[2,1,7],[1,7,8],[7,8,1]....]
-              sum=  [ [6],[10],[16],[16].....
+              sum=  [ [7],[10],[16],[16].....
 
               question to solve:maxsum
     */

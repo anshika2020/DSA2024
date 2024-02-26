@@ -1,7 +1,8 @@
-package patterns.slidingWindow_pattern;
+package patterns.slidingWindow_pattern.easy;
 
-public class FindMaximumAverageSubArray {
+public class LC643_FindMaximumAverageSubArray {
     /*
+    Level: Easy
     You are given an integer array nums consisting of n elements, and an integer k.
 
 Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.

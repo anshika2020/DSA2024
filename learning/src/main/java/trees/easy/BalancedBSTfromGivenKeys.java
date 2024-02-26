@@ -1,7 +1,9 @@
-package trees;
+package trees.easy;
 
 public class BalancedBSTfromGivenKeys {
-
+/*
+110. Balanced Binary Tree
+ */
     static class Node {
         int data;
         Node left;

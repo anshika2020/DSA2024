@@ -1,7 +1,6 @@
 package recusions;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class SubsetWithDuplicateCharacter {
@@ -58,6 +57,6 @@ All the subsets are then printed in separate lines.
     }
 
     public static void main(String[] args) {
-        System.out.println(getAllSubset("dc"));
+        System.out.println(getAllSubset("aab"));
     }
 }

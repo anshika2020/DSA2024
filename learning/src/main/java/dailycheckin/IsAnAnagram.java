@@ -1,7 +1,8 @@
 package dailycheckin;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class IsAnAnagram {
     /*
@@ -25,6 +26,26 @@ Expected space complexity : O(n)
         } else {
             return false;
         }
+    }
+
+
+    // TC and SC: log (n)
+    /*
+    Appraoch to use map and get occurece of character of both string which can help to compare for each char occurence in both maps , if same then true else false
+     */
+    public static boolean isAnagram1(String str1, String str2) {
+        Map<Character, Integer> s1map = new HashMap<>();
+        Map<Character, Integer> s2map = new HashMap<>();
+        for(char c : str1.toCharArray()){
+            s1map.put(c, s1map.getOrDefault(c, 0)+1);
+        }
+        for(char c : str2.toCharArray()){
+            s2map.put(c, s2map.getOrDefault(c, 0)+1);
+        }
+        if(s1map.equals(s2map)){
+            return true;
+        }
+        return false;
     }
 
     private static String sortString(char[] ch, int len) {
@@ -82,6 +103,6 @@ Expected space complexity : O(n)
     }
 
     public static void main(String[] args) {
-        System.out.println(isAnagram("cinema", "iceman"));
+        System.out.println(isAnagram1("cinema", "icemanb"));
     }
 }
