@@ -2,7 +2,7 @@ package arrays.Oct23;
 
 import java.util.Arrays;
 
-public class SurroundedRegions {
+public class LC130_SurroundedRegions {
 
     /*
     130. Surrounded Regions
@@ -40,7 +40,7 @@ The other three 'O' form a surrounded region, so they are flipped.
             }
         }
 
-        // now flip O's if not at the edge of the board
+        // now flip O's if not at the edge of the board and all Os to X
         for(int r=0; r<m;r++) {
             for (int c = 0; c < n; c++) {
                 if(board[r][c]=='O'){
@@ -58,17 +58,19 @@ The other three 'O' form a surrounded region, so they are flipped.
         if(r<0||c<0||r>m-1||c>n-1||board[r][c]!='O') {
             return;
         }
-            board[r][c] = '#';
+            board[r][c] = '#'; // convert all edge Os to #
             dfs(board, r+1, c, m, n);
             dfs(board, r-1, c, m, n);
             dfs(board, r, c+1, m, n);
             dfs(board, r, c-1, m, n);
 
-        }
+        }   
 
     public static void main(String[] args) {
         char [][] board = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
-        surroundedRegion(board);
+
+        char[][] board1 = {{'X','O','X','O','X','O'},{'O','X','O','X','O','X'},{'X','O','X','O','X','O'},{'O','X','O','X','O','X'}};
+        surroundedRegion(board1);
 
     }
 }
